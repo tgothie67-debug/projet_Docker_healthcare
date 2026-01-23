@@ -1,0 +1,28 @@
+services:
+  mongodb:
+    image: mongo:6
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+
+  app:
+    build: .
+    image: healthcare-mongodb:latest
+    container_name: healthcare
+    depends_on:
+      - mongodb
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+    environment:
+      MONGO_URI: ${MONGO_URI}
+    command: python /app/src/import_dataset_MongoDB.py
+
+volumes:
+  mongodb_data:
+    name: mongodb_data

@@ -1,0 +1,16 @@
+from pymongo import MongoClient
+
+client = MongoClient(
+    "mongodb://teogothie:healthcare159@cluster-healthcare-2.cluster-c30408kgmeii.eu-west-3.docdb.amazonaws.com:27017",
+    tls=True,
+    tlsCAFile="rds-global.pem",
+    retryWrites=False,
+    authMechanism="SCRAM-SHA-1"
+)
+
+db = client["healthcare"]
+col = db["test"]
+
+col.insert_one({"ok": True})
+
+print("Connexion OK + insertion OK")

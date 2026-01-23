@@ -1,0 +1,14 @@
+# Accéder dans le conteneur
+
+
+docker exec -it mongodb bash
+
+root@f685ce7c0b84:/# mongosh -u root -p example --authenticationDatabase admin
+
+test> show dbs
+
+test> use healthcare
+
+healthcare> db.dataset.countDocuments()
+
+healthcare> db.dataset.find().limit(5).pretty()
