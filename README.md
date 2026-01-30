@@ -1,4 +1,4 @@
-###🏥 Healthcare Dataset – Migration vers MongoDB avec Docker
+### 🏥 Healthcare Dataset – Migration vers MongoDB avec Docker
 
 Ce projet a pour objectif de :
 
@@ -13,7 +13,7 @@ le tout exécuté automatiquement au démarrage des conteneurs.
 
 ----------------------------------------------------------------------------------------------
 
-###🚀 Migration des données vers MongoDB
+### 🚀 Migration des données vers MongoDB
 
 La migration est réalisée via le script Python import_dataset_MongoDB.py.
 
@@ -41,7 +41,7 @@ La collection est purgée avant chaque import pour garantir un état propre.
 
 ----------------------------------------------------------------------------------------------
 
-###📦 Dépendances Python
+### 📦 Dépendances Python
 
 Elles sont centralisées dans requirements.txt :
 
@@ -53,7 +53,7 @@ Elles sont installées automatiquement lors du build Docker
 
 ----------------------------------------------------------------------------------------------
 
-###🐳 Dockerfile
+### 🐳 Dockerfile
 
 Le Dockerfile sert à construire l’image Python chargée de l’import :
 
@@ -73,11 +73,11 @@ Concrètement :
 
 ----------------------------------------------------------------------------------------------
 
-###🧩 docker-compose
+### 🧩 docker-compose
 
 docker-compose.yml orchestre deux services :
 
-##🗄 MongoDB
+## 🗄 MongoDB
 
 - Image officielle Mongo
 - Authentification activée
@@ -85,7 +85,7 @@ docker-compose.yml orchestre deux services :
 - Utilise un volume Docker pour persister les données
 
 
-##🐍 App Python (import)
+## 🐍 App Python (import)
 
 - Build à partir du Dockerfile
 - Dépend du service MongoDB
@@ -95,7 +95,7 @@ docker-compose.yml orchestre deux services :
 
 ----------------------------------------------------------------------------------------------
 
-###▶️ Lancement du projet
+### ▶️ Lancement du projet
 
 À la racine :
 
@@ -103,11 +103,13 @@ docker-compose.yml orchestre deux services :
 
 ```bash
 docker-compose up --build
+```
 
 - Pour lancer le conteneur avec les images existantes :
 
 ```bash
 docker-compose up (-d pour lancer en arrière-plan)
+```
 
 Résultat :
 
@@ -119,7 +121,7 @@ Résultat :
 
 ----------------------------------------------------------------------------------------------
 
-###🔍 Connexion MongoDB
+### 🔍 Connexion MongoDB
 
 Une fois lancé :
 
