@@ -143,7 +143,9 @@ mongosh -u root -p example --authenticationDatabase admin
 use healthcare
 ```
 
-## Nous sommes dans la base <u><strong>healthcare</strong></u>, et il faut utiliser la collection <u><strong>dataset</strong></u>
+----------------------------------------------------------------------------------------------
+
+## Nous sommes dans la base **__healthcare__**, et il faut utiliser la collection **__dataset__**
 
 Ici nous pouvons exécuter des commandes MongoDB, exemples :
 
