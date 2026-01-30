@@ -126,17 +126,34 @@ Résultat :
 Une fois lancé :
 
 - Accéder au conteneur mongodb
-    --> docker exec -it mongodb bash
 
-- Se connecter à MongoDB via les ID 
-    -- > mongosh -u root -p example --authenticationDatabase admin
+```bash
+docker exec -it mongodb bash
+```
+
+- Se connecter à MongoDB via les ID
+
+```bash
+mongosh -u root -p example --authenticationDatabase admin
+```
 
 - Charger la base de données "healthcare"
-    --> use healthcare
+
+```bash
+use healthcare
+```
 
 Base : healthcare
 Collection : dataset
 
-- Ici nous pouvons exécuter des commandes mongo, exemples :
-    --> db.dataset.countDocuments()
-    --> db.dataset.find().limit(5).pretty()
+Ici nous pouvons exécuter des commandes MongoDB, exemples :
+
+- Afficher le nombre de documents :
+```bash
+db.dataset.countDocuments()
+```
+
+- Afficher les 5 premiers documents :
+```bash
+db.dataset.find().limit(5).pretty()
+```
