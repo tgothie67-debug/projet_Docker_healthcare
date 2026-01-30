@@ -131,7 +131,7 @@ Une fois lancé :
 docker exec -it mongodb bash
 ```
 
-- Se connecter à MongoDB via les ID
+- Se connecter à l'image MongoDB via les ID
 
 ```bash
 mongosh -u root -p example --authenticationDatabase admin
@@ -143,8 +143,7 @@ mongosh -u root -p example --authenticationDatabase admin
 use healthcare
 ```
 
-Base : healthcare
-Collection : dataset
+## Nous sommes dans la base <u><strong>healthcare</strong></u>, et il faut utiliser la collection <u><strong>dataset</strong></u>
 
 Ici nous pouvons exécuter des commandes MongoDB, exemples :
 
