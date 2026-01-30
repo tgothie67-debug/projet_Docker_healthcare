@@ -145,7 +145,7 @@ use healthcare
 
 ----------------------------------------------------------------------------------------------
 
-## Nous sommes dans la base **__healthcare__**, et il faut utiliser la collection **__dataset__**
+## Nous sommes dans la base <u>**healthcare**</u>, et il faut utiliser la collection <u>**dataset**</u>
 
 Ici nous pouvons exécuter des commandes MongoDB, exemples :
 
