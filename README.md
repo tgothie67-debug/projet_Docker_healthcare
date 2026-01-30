@@ -11,6 +11,7 @@ L’idée est d’avoir un pipeline simple :
 CSV → Pandas → MongoDB
 le tout exécuté automatiquement au démarrage des conteneurs.
 
+----------------------------------------------------------------------------------------------
 
 🚀 Migration des données vers MongoDB
 
@@ -38,6 +39,7 @@ Les données sont insérées dans :
 
 La collection est purgée avant chaque import pour garantir un état propre.
 
+----------------------------------------------------------------------------------------------
 
 📦 Dépendances Python
 
@@ -49,6 +51,7 @@ Elles sont centralisées dans requirements.txt :
 
 Elles sont installées automatiquement lors du build Docker
 
+----------------------------------------------------------------------------------------------
 
 🐳 Dockerfile
 
@@ -68,6 +71,7 @@ Concrètement :
 - Insère les données dans MongoDB
 - Puis s’arrête
 
+----------------------------------------------------------------------------------------------
 
 🧩 docker-compose
 
@@ -89,6 +93,8 @@ docker-compose.yml orchestre deux services :
 - S’arrête une fois terminé
 - Grâce à depends_on, MongoDB démarre avant le script d’import.
 
+----------------------------------------------------------------------------------------------
+
 ▶️ Lancement du projet
 
 À la racine :
@@ -107,6 +113,7 @@ Résultat :
 - Le conteneur Python s’arrête
 - MongoDB reste actif avec les données chargées
 
+----------------------------------------------------------------------------------------------
 
 🔍 Connexion MongoDB
 
